@@ -17,7 +17,9 @@ ExecStart=/usr/local/bin/elasticsearch_exporter \
     --web.listen-address={{ es_exporter_web_listen_address }} \
     --web.telemetry-path={{ es_exporter_web_telemetry_path }}
 
-SyslogIdentifier=elasticsearch_exporter
+SyslogIdentifier={{ es_exporter_systemd_syslog_identifier }}
+StandardOutput={{ es_exporter_systemd_standard_output }}
+StandardError={{ es_exporter_systemd_standard_error }}
 Restart=always
 RestartSec=1
 

@@ -10,5 +10,10 @@ es_exporter_es_url: "http://localhost:9200"
 
 es_exporter_custom_option: ""
 
+# logging variables
+es_exporter_systemd_syslog_identifier: "elasticsearch_exporter"
+es_exporter_systemd_standard_output: "syslog"
+es_exporter_systemd_standard_error: "syslog"
+
 # for custom build
 es_exporter_binary_local_dir: ""
