@@ -33,7 +33,7 @@
       get_url:
         url: "https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v{{ es_exporter_version }}/elasticsearch_exporter-{{ es_exporter_version }}.linux-{{ go_arch }}.tar.gz"
         dest: "/tmp/elasticsearch_exporter-{{ es_exporter_version }}.linux-{{ go_arch }}.tar.gz"
-        checksum: "sha256:{{ es_exporter_checksum }}"
+        checksum: "sha256:{{ __es_exporter_checksum }}"
       register: _download_binary
       until: _download_binary is success
       retries: 5
